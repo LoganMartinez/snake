@@ -1,2 +1,21 @@
-[0m[[0m[33mwarn[0m] [0m[0mthere was one deprecation warning (since 1.0.0-R9); re-run with -deprecation for details[0m
-[0m[[0m[33mwarn[0m] [0m[0mone warning found[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/logan/Desktop/school/Projects/snake/src/main/scala/snake/Main.scala:44:13: type mismatch;[0m
+[0m[[0m[31merror[0m] [0m[0m found   : Int[0m
+[0m[[0m[31merror[0m] [0m[0m required: ?{def -(x$1: ? >: Double): ?}[0m
+[0m[[0m[31merror[0m] [0m[0mNote that implicit conversions are not applicable because they are ambiguous:[0m
+[0m[[0m[31merror[0m] [0m[0m both method int2long in object Int of type (x: Int)Long[0m
+[0m[[0m[31merror[0m] [0m[0m and method int2float in object Int of type (x: Int)Float[0m
+[0m[[0m[31merror[0m] [0m[0m are possible conversion functions from Int to ?{def -(x$1: ? >: Double): ?}[0m
+[0m[[0m[31merror[0m] [0m[0m            updateTime -= delay[0m
+[0m[[0m[31merror[0m] [0m[0m            ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/logan/Desktop/school/Projects/snake/src/main/scala/snake/Main.scala:44:24: value -= is not a member of Int[0m
+[0m[[0m[31merror[0m] [0m[0m  Expression does not convert to assignment because:[0m
+[0m[[0m[31merror[0m] [0m[0m    overloaded method value - with alternatives:[0m
+[0m[[0m[31merror[0m] [0m[0m      (x: Int)Int <and>[0m
+[0m[[0m[31merror[0m] [0m[0m      (x: Char)Int <and>[0m
+[0m[[0m[31merror[0m] [0m[0m      (x: Short)Int <and>[0m
+[0m[[0m[31merror[0m] [0m[0m      (x: Byte)Int[0m
+[0m[[0m[31merror[0m] [0m[0m     cannot be applied to (Double)[0m
+[0m[[0m[31merror[0m] [0m[0m    expansion: $anon.this.updateTime = $anon.this.updateTime.-(delay)[0m
+[0m[[0m[31merror[0m] [0m[0m            updateTime -= delay[0m
+[0m[[0m[31merror[0m] [0m[0m                       ^[0m
+[0m[[0m[31merror[0m] [0m[0mtwo errors found[0m

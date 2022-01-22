@@ -10,41 +10,41 @@ import scalafx.scene.paint.Color
 import scalafx.scene.text.Font
 
 object Main extends JFXApp {
-  val canvasWidth = 800.0
-  val canvasHeight = 800.0
-  val snakeWidth = .8
-  val snakeHeight = .8
-  val updateSpeed = .2
-  val startX = 2
-  val startY = 2
   private var started = false
   private var lost = false
 
-  val canvas = new Canvas(canvasWidth, canvasHeight)
+  val canvas = new Canvas(Settings.canvasWidth, Settings.canvasHeight)
   val gc = canvas.graphicsContext2D
   val level = new Level
-  val renderer = new Renderer
-  val snake = new SnakeHead(startX, startY)
+  val renderer = new Renderer(gc)
+  val snake = new SnakeHead(Settings.startX, Settings.startY, level)
 
   level += snake
-  level += new Apple
+  level += new Apple(level)
+
+  def gameover() = {
+    // lost = true
+    // gc.setFill(Color.BLACK)
+    // gc.setFont(Font.font("Verdana", 100))
+    // gc.fillText("You Lose", 0,100)
+  }
 
   stage = new JFXApp.PrimaryStage {
     title = "snake"
-    scene = new Scene(canvasWidth, canvasHeight) {
+    scene = new Scene(Settings.canvasWidth, Settings.canvasHeight) {
       content += canvas
-      renderer.render()
+      renderer.render(level.makePassable)
       var lastTime = -1L
-      var updateTime = updateSpeed
+      var updateTime = Settings.updateSpeed
       val timer = AnimationTimer { time => 
         if(started && !lost) {
           if (lastTime > 0) {
             val delay = (time - lastTime) / 1e9
-            renderer.render()
+            renderer.render(level.makePassable)
             updateTime -= delay
             if(updateTime <= 0) {
               for(entity <- level.entities) entity.update()
-              updateTime = updateSpeed
+              updateTime = Settings.updateSpeed
             }
           }
         }
@@ -62,7 +62,7 @@ object Main extends JFXApp {
       case "A" if !lost => snake.setDir(3)
       case "R" => {
         level.reset()
-        renderer.render()
+        renderer.render(level.makePassable)
         lost = false
         started = false
       }
@@ -73,10 +73,4 @@ object Main extends JFXApp {
 
   canvas.requestFocus();
 
-  def gameover() = {
-    lost = true
-    gc.setFill(Color.BLACK)
-    gc.setFont(Font.font("Verdana", 100))
-    gc.fillText("You Lose", 0,100)
-  }
 }

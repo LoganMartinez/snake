@@ -1,8 +1,8 @@
 package snake
 
-class SnakeHead(private var _x:Int, private var _y:Int) extends SnakePart {
-  val width = Main.snakeWidth
-  val height = Main.snakeHeight
+class SnakeHead(private var _x:Int, private var _y:Int, val level:Level) extends SnakePart {
+  val width = Settings.snakeWidth
+  val height = Settings.snakeHeight
   private var dir = 1
   private var nextDir = 1
   private var tail:SnakePart = this
@@ -16,15 +16,15 @@ class SnakeHead(private var _x:Int, private var _y:Int) extends SnakePart {
   }
 
   def createChild() = {
-    tail = new SnakeBody(tail)
-    Main.level += tail
+    tail = new SnakeBody(tail, level)
+    level += tail
   }
 
   def setTail(newTail:SnakePart) = tail = newTail
 
   def reset() = { 
-    _x = Main.startX
-    _y = Main.startY 
+    _x = Settings.startX
+    _y = Settings.startY 
     dir = 1
     tail = this
   }
@@ -41,17 +41,17 @@ class SnakeHead(private var _x:Int, private var _y:Int) extends SnakePart {
 
     if(_x < 0) { _x + 1; Main.gameover() } 
     if(_y < 0) { _y + 1; Main.gameover() }
-    if(_x >= Main.level.boardSize) { _x - 1; Main.gameover() }
-    if(_y >= Main.level.boardSize) { _y - 1; Main.gameover() }
+    if(_x >= Settings.boardSize) { _x - 1; Main.gameover() }
+    if(_y >= Settings.boardSize) { _y - 1; Main.gameover() }
 
-    for(entity <- Main.level.entities) {
+    for(entity <- level.entities) {
       if(entity.x == x && entity.y == y) {
         entity match {
           case snake:SnakePart if(snake != this) => Main.gameover()
           case apple:Apple => 
-            Main.level.remove(apple)
+            level.remove(apple)
             tail.createChild()
-            Main.level += new Apple
+            level += new Apple(level)
           case _ =>
         }
       }

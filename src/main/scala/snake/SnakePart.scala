@@ -7,4 +7,5 @@ abstract class SnakePart extends Entity {
   def height:Double
 
   def createChild():Unit
+  def makePassable() = new PassableEntity(x, y, width, height, EntityType.snakePart)
 }

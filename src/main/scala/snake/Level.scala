@@ -1,7 +1,6 @@
 package snake
 
 class Level {
-  val boardSize = 10
   private var _entities = List[Entity]()
 
   def entities = _entities
@@ -16,11 +15,14 @@ class Level {
       case h:SnakeHead => h.reset()
       case _ => 
     }
-    +=(new Apple)
+    +=(new Apple(this))
   }
   def occupiedSquares:Set[(Int,Int)] = {
     var ret = Set[(Int,Int)]()
     for(e <- entities) ret += ((e.x, e.y))
     return ret
   }
+
+  def makePassable() = new PassableLevel(_entities.map(e => e.makePassable))
+  def update() = for(e <- entities) e.update()
 }
