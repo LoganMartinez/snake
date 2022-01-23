@@ -13,10 +13,9 @@ import scalafx.scene.canvas.Canvas
 import scalafx.application.Platform
 
 object Client extends JFXApp {
-  private var started = false
   private var lost = false
 
-  val sock = new Socket("192.168.1.227", 8080)
+  val sock = new Socket("localhost", 8080)
   val oos = new ObjectOutputStream(sock.getOutputStream)
   val ois = new ObjectInputStream(sock.getInputStream)
   implicit val ec: ExecutionContext = ExecutionContext.global
@@ -30,7 +29,7 @@ object Client extends JFXApp {
       ois.readObject() match {
         case level:PassableLevel => 
           Platform.runLater(renderer.render(level))
-        case _ => println("unknown type")
+        case _ => 
       }
     }
   }
@@ -40,7 +39,6 @@ object Client extends JFXApp {
     scene = new Scene(Settings.canvasWidth, Settings.canvasHeight) {
       content += canvas
       canvas.onKeyPressed() = (e:KeyEvent) => {
-        if(!started) started = true
         e.code.toString match {
           case "W" => 
             oos.writeInt(KeyCode.UP)
@@ -55,9 +53,12 @@ object Client extends JFXApp {
             oos.writeInt(KeyCode.LEFT)
             oos.flush()
           case "R" => 
+            oos.writeInt(KeyCode.R)
+            oos.flush()
           case _ => 
         }
       }
+      
     }
   }
   canvas.requestFocus()

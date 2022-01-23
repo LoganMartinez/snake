@@ -7,7 +7,7 @@ class Renderer(val gc:GraphicsContext) {
   val cellWidth = Settings.canvasWidth / Settings.boardSize.toDouble
   val cellHeight = Settings.canvasHeight / Settings.boardSize.toDouble
 
-  def drawEntity(x:Int, y:Int, w:Double, h:Double) = {
+  def drawEntity(x:Int, y:Int, w:Double, h:Double, c:Int) = {
     val widthOffset = (1 - (w % 1)) / 2
     val heightOffset = (1 - (h % 1)) / 2
     gc.fillRect((widthOffset + x) * cellWidth, (heightOffset + y) * cellHeight, w * cellWidth, h * cellHeight)
@@ -18,14 +18,14 @@ class Renderer(val gc:GraphicsContext) {
       if((row + col) % 2 == 0) gc.setFill(Color.AQUAMARINE) else gc.setFill(Color.DARKCYAN)
       gc.fillRect(col * cellWidth, row * cellHeight, cellWidth, cellHeight)
     }
-    for(PassableEntity(x,y,w,h,t) <- level.entities) {
+    for(PassableEntity(x,y,w,h,t,c) <- level.entities) {
       t match {
         case EntityType.snakePart => 
-          gc.setFill(Color.CORAL)
-          drawEntity(x,y,w,h)
+          gc.setFill(Settings.colors(c))
+          drawEntity(x,y,w,h,c)
         case EntityType.apple =>
           gc.setFill(Color.CRIMSON)
-          drawEntity(x,y,w,h)
+          drawEntity(x,y,w,h,c)
         case _ => 
       }
     }

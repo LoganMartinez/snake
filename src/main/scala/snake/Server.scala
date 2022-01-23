@@ -7,6 +7,7 @@ import scala.concurrent.Future
 import java.io.ObjectInputStream
 import java.io.ObjectOutputStream
 import java.net.SocketException
+import scala.util.Random
 
 object Server extends App {
   private val clientQueue = new LinkedBlockingQueue[ConnectedClient]
@@ -24,7 +25,13 @@ object Server extends App {
       val ois = new ObjectInputStream(sock.getInputStream())
       val oos = new ObjectOutputStream(sock.getOutputStream())
       oos.flush()
-      val player = new SnakeHead(Settings.startX, Settings.startY, level)
+      var startX = Random.nextInt(Settings.boardSize)
+      var startY = Random.nextInt(Settings.boardSize)
+      while(level.occupiedSquares.contains((startX,startY))) {
+        startX = Random.nextInt(Settings.boardSize)
+        startY = Random.nextInt(Settings.boardSize)
+      }
+      val player = new SnakeHead(startX, startY, level)
       clientQueue.put(ConnectedClient(sock, ois, oos, player))
     }
   }
@@ -43,25 +50,32 @@ object Server extends App {
       val delay = (time - lastTime) / 1e9
       sendDelay += delay
       val sendUpdate = sendDelay > Settings.updateSpeed
-      for(ConnectedClient(sock,ois,oos,player) <- clients) {
+      for(client@ConnectedClient(sock,ois,oos,player) <- clients) {
         try {
           if(ois.available() > 0) {
             val key = ois.readInt()
+            player.start()
             key match {
               case KeyCode.UP => player.setDir(0)
               case KeyCode.RIGHT => player.setDir(1)
               case KeyCode.DOWN => player.setDir(2)
               case KeyCode.LEFT => player.setDir(3)
+              case KeyCode.R =>
+                player.reset()
+                if(level.entities.contains(player)) level.remove(player)
+                level += player
               case _ => 
             }
-
           }
           if(sendUpdate) oos.writeObject(level.makePassable)
         } catch {
           case e:SocketException => 
-            clients.filter(_.player != player)
+            val index = clients.indexOf(client)
+            clients = clients.patch(index, List[ConnectedClient](), 1)
             level.remove(player)
+            level.removeApple()
         }
+        
       }
       if(sendUpdate) {
         level.update()

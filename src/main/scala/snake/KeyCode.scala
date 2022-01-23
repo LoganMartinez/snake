@@ -5,4 +5,5 @@ object KeyCode {
   val RIGHT = 1001
   val DOWN = 1002
   val LEFT = 1003
+  val R = 1004
 }

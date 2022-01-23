@@ -1,0 +1,6 @@
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(run, Some(40c404f3-cbfc-4e54-9dca-3e8c983f6e9f), Some(CommandSource(console0)))[0m
+[0m[[0m[0mdebug[0m] [0m[0mEvaluating tasks: Compile / run[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 1 Scala source to /Users/logan/Desktop/school/Projects/snake/target/scala-2.12/classes ...[0m
+[0m[[0m[32msuccess[0m] [0m[0mTotal time: 20 s, completed Jan 23, 2022, 1:30:13 PM[0m
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(shell, None, None)[0m
