@@ -61,8 +61,8 @@ object Server extends App {
               case KeyCode.DOWN => player.setDir(2)
               case KeyCode.LEFT => player.setDir(3)
               case KeyCode.R =>
-                player.reset()
                 if(level.entities.contains(player)) level.remove(player)
+                player.reset()
                 level += player
               case _ => 
             }

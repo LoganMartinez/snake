@@ -11,11 +11,12 @@ import scalafx.scene.Scene
 import scalafx.scene.input.KeyEvent
 import scalafx.scene.canvas.Canvas
 import scalafx.application.Platform
+import scala.io.StdIn.readLine
 
 object Client extends JFXApp {
-  private var lost = false
-
-  val sock = new Socket("localhost", 8080)
+  println("Enter ip (localhost by default): ")
+  val machine = readLine()
+  val sock = new Socket((if(machine == "") "localhost" else machine), 8080)
   val oos = new ObjectOutputStream(sock.getOutputStream)
   val ois = new ObjectInputStream(sock.getInputStream)
   implicit val ec: ExecutionContext = ExecutionContext.global
