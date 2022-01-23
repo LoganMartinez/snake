@@ -14,4 +14,5 @@ object Settings {
   val startX:Int = 2
   val startY:Int = 2
   val colors = Array(Color.CRIMSON, Color.rgb(116,82,80), Color.rgb(154,94,92), Color.rgb(231,202,191), Color.rgb(217,130,136), Color.rgb(233,160,147))
+  val wrapAround = true
 }

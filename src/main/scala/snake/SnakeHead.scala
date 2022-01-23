@@ -57,10 +57,18 @@ class SnakeHead(private var _x:Int, private var _y:Int, val level:Level) extends
         case _ => 
       }
 
-      if(_x < 0) { _x + 1; level.remove(this) } 
-      if(_y < 0) { _y + 1; level.remove(this) }
-      if(_x >= Settings.boardSize) { _x - 1; level.remove(this) }
-      if(_y >= Settings.boardSize) { _y - 1; level.remove(this) }
+      if(Settings.wrapAround) {
+        if(_x < 0) _x = Settings.boardSize - 1
+        if(_y < 0) _y = Settings.boardSize - 1
+        if(_x >= Settings.boardSize) _x = 0
+        if(_y >= Settings.boardSize) _y = 0 
+      } else {
+        if(_x < 0) { _x + 1; level.remove(this) } 
+        if(_y < 0) { _y + 1; level.remove(this) }
+        if(_x >= Settings.boardSize) { _x - 1; level.remove(this) }
+        if(_y >= Settings.boardSize) { _y - 1; level.remove(this) }
+      }
+      
 
       for(entity <- level.entities) {
         if(entity.x == x && entity.y == y) {
