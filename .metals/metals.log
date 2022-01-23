@@ -6518,3 +6518,126 @@ java.lang.NullPointerException
 2022.01.21 21:10:57 INFO  time: compiled snake in 1.99s
 2022.01.21 21:31:39 INFO  compiling snake (1 scala source)
 2022.01.21 21:31:39 INFO  time: compiled snake in 0.96s
+2022.01.21 22:07:43 WARN  Could not load snapshot text for /Users/logan/Desktop/school/Projects/snake/src/main/scala/snake/Settings.scala
+2022.01.21 22:07:43 WARN  Could not load snapshot text for /Users/logan/Desktop/school/Projects/snake/src/main/scala/snake/Settings.scala
+2022.01.21 22:07:43 INFO  compiling snake (1 scala source)
+2022.01.21 22:07:44 WARN  Could not load snapshot text for /Users/logan/Desktop/school/Projects/snake/src/main/scala/snake/Settings.scala
+2022.01.21 22:07:44 INFO  time: compiled snake in 1.54s
+2022.01.21 22:07:46 INFO  compiling snake (1 scala source)
+2022.01.21 22:07:46 INFO  time: compiled snake in 0.83s
+2022.01.21 22:07:49 INFO  compiling snake (1 scala source)
+2022.01.21 22:07:49 INFO  time: compiled snake in 0.9s
+2022.01.21 22:07:53 INFO  compiling snake (1 scala source)
+2022.01.21 22:07:53 INFO  time: compiled snake in 0.68s
+2022.01.21 22:07:59 INFO  compiling snake (1 scala source)
+2022.01.21 22:07:59 INFO  time: compiled snake in 0.69s
+2022.01.21 22:08:10 INFO  compiling snake (1 scala source)
+2022.01.21 22:08:10 INFO  time: compiled snake in 0.74s
+2022.01.21 23:31:50 INFO  compiling snake (1 scala source)
+2022.01.21 23:31:52 INFO  time: compiled snake in 1.71s
+2022.01.21 23:32:58 INFO  shutting down Metals
+2022.01.21 23:32:58 INFO  Shut down connection with build server.
+2022.01.21 23:32:58 INFO  Shut down connection with build server.
+2022.01.22 17:21:54 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/logan/Desktop/school/Projects/snake/.metals/lsp.trace.json or /Users/logan/Library/Caches/org.scalameta.metals/lsp.trace.json
+2022.01.22 17:21:55 INFO  logging to file /Users/logan/Desktop/school/Projects/snake/.metals/metals.log
+2022.01.22 17:21:55 INFO  Started: Metals version 0.11.1 in workspace '/Users/logan/Desktop/school/Projects/snake' for client Visual Studio Code 1.63.2.
+2022.01.22 17:21:55 INFO  Parse release: 11.0.9
+2022.01.22 17:22:02 INFO  time: initialize in 6.51s
+2022.01.22 17:22:04 INFO  Attempting to connect to the build server...
+2022.01.22 17:22:04 INFO  skipping build import with status 'Installed'
+2022.01.22 17:22:05 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/logan/Desktop/school/Projects/snake/.metals/bsp.trace.json or /Users/logan/Library/Caches/org.scalameta.metals/bsp.trace.json
+2022.01.22 17:22:05 INFO  Attempting to connect to the build server...
+2022.01.22 17:22:05 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/logan/Desktop/school/Projects/snake/project/.metals/bsp.trace.json or /Users/logan/Library/Caches/org.scalameta.metals/bsp.trace.json
+2022.01.22 17:22:05 INFO  time: Connected to build server in 1.32s
+2022.01.22 17:22:05 INFO  Connected to Build server: Bloop v1.4.12
+2022.01.22 17:22:16 INFO  no build target found for /Users/logan/Desktop/school/Projects/snake/src/main/scala/snake/SnakePart.scala. Using presentation compiler with project's scala-library version: 3.1.0
+2022.01.22 17:22:16 INFO  time: code lens generation in 11s
+2022.01.22 17:22:17 INFO  time: Imported build in 0.26s
+2022.01.22 17:22:19 INFO  no build target found for /Users/logan/Desktop/school/Projects/snake/src/main/scala/snake/SnakePart.scala. Using presentation compiler with project's scala-library version: 3.1.0
+2022.01.22 17:22:22 INFO  time: code lens generation in 17s
+2022.01.22 17:22:22 INFO  time: code lens generation in 2.83s
+2022.01.22 17:22:22 INFO  time: code lens generation in 2.83s
+2022.01.22 17:22:29 INFO  time: indexed workspace in 11s
+2022.01.22 17:22:51 INFO  compiling snake (1 scala source)
+2022.01.22 17:22:53 INFO  time: compiled snake in 1.79s
+2022.01.22 17:23:44 INFO  compiling snake (1 scala source)
+2022.01.22 17:23:53 INFO  time: compiled snake in 8.69s
+2022.01.22 17:24:51 INFO  compiling snake (1 scala source)
+2022.01.22 17:24:51 INFO  time: compiled snake in 0.16s
+2022.01.22 17:24:53 INFO  compiling snake (1 scala source)
+2022.01.22 17:24:53 INFO  time: compiled snake in 0.98s
+2022.01.22 17:24:53 INFO  compiling snake (2 scala sources)
+2022.01.22 17:24:55 INFO  time: compiled snake in 0.48s
+2022.01.22 17:25:02 WARN  Could not load snapshot text for /Users/logan/Desktop/school/Projects/snake/src/main/scala/snake/SnakeBody.scala
+2022.01.22 17:25:02 WARN  Could not load snapshot text for /Users/logan/Desktop/school/Projects/snake/src/main/scala/snake/SnakeBody.scala
+2022.01.22 17:25:02 INFO  compiling snake (1 scala source)
+2022.01.22 17:25:02 INFO  time: compiled snake in 0.12s
+2022.01.22 17:25:04 INFO  compiling snake (1 scala source)
+2022.01.22 17:25:04 WARN  Could not load snapshot text for /Users/logan/Desktop/school/Projects/snake/src/main/scala/snake/SnakeBody.scala
+2022.01.22 17:25:04 WARN  Could not load snapshot text for /Users/logan/Desktop/school/Projects/snake/src/main/scala/snake/SnakeBody.scala
+2022.01.22 17:25:04 INFO  time: compiled snake in 97ms
+2022.01.22 17:25:11 WARN  Could not load snapshot text for /Users/logan/Desktop/school/Projects/snake/src/main/scala/snake/SnakeBody.scala
+2022.01.22 17:25:13 INFO  compiling snake (1 scala source)
+2022.01.22 17:25:13 WARN  Could not load snapshot text for /Users/logan/Desktop/school/Projects/snake/src/main/scala/snake/SnakeBody.scala
+2022.01.22 17:25:13 WARN  Could not load snapshot text for /Users/logan/Desktop/school/Projects/snake/src/main/scala/snake/SnakeBody.scala
+2022.01.22 17:25:13 INFO  time: compiled snake in 92ms
+2022.01.22 17:25:14 WARN  Could not load snapshot text for /Users/logan/Desktop/school/Projects/snake/src/main/scala/snake/SnakeBody.scala
+2022.01.22 17:25:18 WARN  Could not load snapshot text for /Users/logan/Desktop/school/Projects/snake/src/main/scala/snake/SnakeBody.scala
+2022.01.22 17:25:20 WARN  Could not load snapshot text for /Users/logan/Desktop/school/Projects/snake/src/main/scala/snake/SnakeBody.scala
+2022.01.22 17:25:20 WARN  Could not load snapshot text for /Users/logan/Desktop/school/Projects/snake/src/main/scala/snake/SnakeBody.scala
+2022.01.22 17:25:21 WARN  Could not load snapshot text for /Users/logan/Desktop/school/Projects/snake/src/main/scala/snake/SnakeBody.scala
+2022.01.22 17:25:21 WARN  Could not load snapshot text for /Users/logan/Desktop/school/Projects/snake/src/main/scala/snake/SnakeBody.scala
+2022.01.22 17:25:22 WARN  Could not load snapshot text for /Users/logan/Desktop/school/Projects/snake/src/main/scala/snake/SnakeBody.scala
+2022.01.22 17:25:21 WARN  Could not load snapshot text for /Users/logan/Desktop/school/Projects/snake/src/main/scala/snake/SnakeBody.scala
+2022.01.22 17:25:22 WARN  Could not load snapshot text for /Users/logan/Desktop/school/Projects/snake/src/main/scala/snake/SnakeBody.scala
+2022.01.22 17:25:23 WARN  Could not load snapshot text for /Users/logan/Desktop/school/Projects/snake/src/main/scala/snake/SnakeBody.scala
+2022.01.22 17:25:24 WARN  Could not load snapshot text for /Users/logan/Desktop/school/Projects/snake/src/main/scala/snake/SnakeBody.scala
+2022.01.22 17:25:23 WARN  Could not load snapshot text for /Users/logan/Desktop/school/Projects/snake/src/main/scala/snake/SnakeBody.scala
+2022.01.22 17:25:25 WARN  Could not load snapshot text for /Users/logan/Desktop/school/Projects/snake/src/main/scala/snake/SnakeBody.scala
+2022.01.22 17:25:25 WARN  Could not load snapshot text for /Users/logan/Desktop/school/Projects/snake/src/main/scala/snake/SnakeBody.scala
+2022.01.22 17:25:25 INFO  compiling snake (1 scala source)
+2022.01.22 17:25:25 INFO  time: compiled snake in 0.82s
+2022.01.22 17:25:25 INFO  compiling snake (2 scala sources)
+2022.01.22 17:25:25 INFO  time: compiled snake in 99ms
+2022.01.22 17:25:28 INFO  compiling snake (1 scala source)
+2022.01.22 17:25:28 INFO  time: compiled snake in 0.92s
+2022.01.22 17:25:28 INFO  compiling snake (2 scala sources)
+2022.01.22 17:25:29 INFO  time: compiled snake in 0.1s
+2022.01.22 17:25:37 INFO  compiling snake (2 scala sources)
+2022.01.22 17:25:39 INFO  time: compiled snake in 1.48s
+2022.01.22 17:40:47 WARN  no build target for: /Users/logan/Desktop/school/Projects/snake/project/assembly.sbt
+2022.01.22 17:40:47 WARN  no build target for: /Users/logan/Desktop/school/Projects/snake/project/assembly.sbt
+2022.01.22 17:40:47 WARN  no build target for: /Users/logan/Desktop/school/Projects/snake/project/assembly.sbt
+2022.01.22 17:40:52 INFO  running '/Users/logan/.jabba/jdk/adopt@1.11.0-9/Contents/Home/bin/java -Djline.terminal=jline.UnsupportedTerminal -Dsbt.log.noformat=true -Dfile.encoding=UTF-8 -jar /var/folders/j3/cv4l7mf51mz6d40h_4l_x38h0000gp/T/metals14743628659425091768/sbt-launch.jar -Dbloop.export-jar-classifiers=sources bloopInstall'
+2022.01.22 17:40:54 INFO  [info] welcome to sbt 1.6.1 (AdoptOpenJDK Java 11.0.9)
+2022.01.22 17:40:57 INFO  [info] loading settings for project snake-build-build-build from metals.sbt ...
+2022.01.22 17:40:57 INFO  [info] loading project definition from /Users/logan/Desktop/school/Projects/snake/project/project/project
+2022.01.22 17:41:00 INFO  [info] loading settings for project snake-build-build from metals.sbt ...
+2022.01.22 17:41:00 INFO  [info] loading project definition from /Users/logan/Desktop/school/Projects/snake/project/project
+2022.01.22 17:41:02 INFO  [success] Generated .bloop/snake-build-build.json
+2022.01.22 17:41:02 INFO  [success] Total time: 2 s, completed Jan 22, 2022, 5:41:03 PM
+2022.01.22 17:41:02 INFO  [info] loading settings for project snake-build from assembly.sbt,metals.sbt ...
+2022.01.22 17:41:04 INFO  [info] loading project definition from /Users/logan/Desktop/school/Projects/snake/project
+2022.01.22 17:41:05 INFO  [success] Generated .bloop/snake-build.json
+2022.01.22 17:41:05 INFO  [success] Total time: 2 s, completed Jan 22, 2022, 5:41:05 PM
+2022.01.22 17:41:07 INFO  [info] loading settings for project snake from build.sbt ...
+2022.01.22 17:41:07 INFO  [info] set current project to Snake (in build file:/Users/logan/Desktop/school/Projects/snake/)
+2022.01.22 17:41:07 INFO  [success] Generated .bloop/snake-test.json
+2022.01.22 17:41:07 INFO  [success] Generated .bloop/snake.json
+2022.01.22 17:41:07 INFO  [success] Total time: 0 s, completed Jan 22, 2022, 5:41:08 PM
+2022.01.22 17:41:08 INFO  time: ran 'sbt bloopInstall' in 15s
+2022.01.22 17:41:08 INFO  Disconnecting from Bloop session...
+2022.01.22 17:41:08 INFO  Shut down connection with build server.
+2022.01.22 17:41:08 INFO  Shut down connection with build server.
+2022.01.22 17:41:08 INFO  Attempting to connect to the build server...
+2022.01.22 17:41:08 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/logan/Desktop/school/Projects/snake/.metals/bsp.trace.json or /Users/logan/Library/Caches/org.scalameta.metals/bsp.trace.json
+2022.01.22 17:41:08 INFO  Attempting to connect to the build server...
+2022.01.22 17:41:08 INFO  Attempting to connect to the build server...
+2022.01.22 17:41:08 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/logan/Desktop/school/Projects/snake/project/.metals/bsp.trace.json or /Users/logan/Library/Caches/org.scalameta.metals/bsp.trace.json
+2022.01.22 17:41:08 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/logan/Desktop/school/Projects/snake/project/project/.metals/bsp.trace.json or /Users/logan/Library/Caches/org.scalameta.metals/bsp.trace.json
+2022.01.22 17:41:08 INFO  time: Connected to build server in 0.12s
+2022.01.22 17:41:08 INFO  Connected to Build server: Bloop v1.4.12
+2022.01.22 17:41:10 INFO  time: indexed workspace in 2.32s
+2022.01.22 17:41:12 INFO  skipping build import with status 'Installed'
+2022.01.22 18:13:45 INFO  compiling snake (1 scala source)
+2022.01.22 18:13:47 INFO  time: compiled snake in 1.85s

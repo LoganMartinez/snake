@@ -16,7 +16,7 @@ class SnakeHead(private var _x:Int, private var _y:Int, val level:Level) extends
   }
 
   def createChild() = {
-    tail = new SnakeBody(tail, level)
+    tail = new SnakeBody(tail, this, level)
     level += tail
   }
 

@@ -1,6 +1,6 @@
 package snake
 
-class SnakeBody(parent:Entity, val level:Level) extends SnakePart{
+class SnakeBody(parent:SnakePart, head:SnakeHead, val level:Level) extends SnakePart{
   val width = Settings.snakeWidth 
   val height = Settings.snakeHeight
   private var _x = -1
@@ -19,8 +19,8 @@ class SnakeBody(parent:Entity, val level:Level) extends SnakePart{
     nextX = parent.x
     nextY = parent.y
     if(creatingChild) {
-      val child = new SnakeBody(this, level)
-      Main.snake.setTail(child)
+      val child = new SnakeBody(this, head, level)
+      head.setTail(child)
       level += child
       creatingChild = false
     }

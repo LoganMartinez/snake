@@ -16,7 +16,7 @@ object Client extends JFXApp {
   private var started = false
   private var lost = false
 
-  val sock = new Socket("localhost", 8080)
+  val sock = new Socket("192.168.1.227", 8080)
   val oos = new ObjectOutputStream(sock.getOutputStream)
   val ois = new ObjectInputStream(sock.getInputStream)
   implicit val ec: ExecutionContext = ExecutionContext.global

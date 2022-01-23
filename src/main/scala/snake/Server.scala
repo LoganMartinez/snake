@@ -35,6 +35,7 @@ object Server extends App {
     while(!clientQueue.isEmpty()) {
       val cc = clientQueue.take()
       level += cc.player
+      level += new Apple(level)
       clients ::= cc
     }
     val time = System.nanoTime()

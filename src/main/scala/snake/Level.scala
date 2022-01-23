@@ -10,7 +10,7 @@ class Level {
     _entities = _entities.patch(index, List[Entity](), 1)
   }
   def reset() = {
-    _entities = _entities.filter( s => s == Main.snake )
+    _entities = _entities.filter( s => s == Main.snake ) //needs to be changed
     for(e <- _entities) e match {
       case h:SnakeHead => h.reset()
       case _ => 
