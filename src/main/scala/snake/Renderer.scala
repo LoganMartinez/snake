@@ -1,32 +1,31 @@
 package snake
 
 import javafx.scene.paint.Color
+import scalafx.scene.canvas.GraphicsContext
 
-class Renderer {
-  val gc = Main.gc
-  val level = Main.level
-  val cellWidth = Main.canvasWidth / level.boardSize.toDouble
-  val cellHeight = Main.canvasHeight / level.boardSize.toDouble
+class Renderer(val gc:GraphicsContext) {
+  val cellWidth = Settings.canvasWidth / Settings.boardSize.toDouble
+  val cellHeight = Settings.canvasHeight / Settings.boardSize.toDouble
 
-  def drawEntity(entity:Entity) = {
-    val widthOffset = (1 - (entity.width % 1)) / 2
-    val heightOffset = (1 - (entity.height % 1)) / 2
-    gc.fillRect((widthOffset + entity.x) * cellWidth, (heightOffset + entity.y) * cellHeight, entity.width * cellWidth, entity.height * cellHeight)
+  def drawEntity(x:Int, y:Int, w:Double, h:Double, c:Int) = {
+    val widthOffset = (1 - (w % 1)) / 2
+    val heightOffset = (1 - (h % 1)) / 2
+    gc.fillRect((widthOffset + x) * cellWidth, (heightOffset + y) * cellHeight, w * cellWidth, h * cellHeight)
   }
   
-  def render() {
-    for(row <- 0 to level.boardSize; col <- 0 to level.boardSize) {
+  def render(level:PassableLevel) {
+    for(row <- 0 to Settings.boardSize; col <- 0 to Settings.boardSize) {
       if((row + col) % 2 == 0) gc.setFill(Color.AQUAMARINE) else gc.setFill(Color.DARKCYAN)
       gc.fillRect(col * cellWidth, row * cellHeight, cellWidth, cellHeight)
     }
-    for(entity <- level.entities) {
-      entity match {
-        case snake:SnakePart => 
-          gc.setFill(Color.CORAL)
-          drawEntity(snake)
-        case apple:Apple =>
+    for(PassableEntity(x,y,w,h,t,c) <- level.entities) {
+      t match {
+        case EntityType.snakePart => 
+          gc.setFill(Settings.colors(c))
+          drawEntity(x,y,w,h,c)
+        case EntityType.apple =>
           gc.setFill(Color.CRIMSON)
-          drawEntity(apple)
+          drawEntity(x,y,w,h,c)
         case _ => 
       }
     }

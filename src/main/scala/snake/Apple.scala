@@ -2,16 +2,15 @@ package snake
 
 import scala.util.Random
 
-class Apple extends Entity {
-
-  private var _x = Random.nextInt(Main.level.boardSize)
-  private var _y = Random.nextInt(Main.level.boardSize)
-  while(Main.level.occupiedSquares.contains((_x,_y))) {
-    _x = Random.nextInt(Main.level.boardSize)
-    _y = Random.nextInt(Main.level.boardSize)
+class Apple(val level:Level) extends Entity {
+  private var _x = Random.nextInt(Settings.boardSize)
+  private var _y = Random.nextInt(Settings.boardSize)
+  while(level.occupiedSquares.contains((_x,_y))) {
+    _x = Random.nextInt(Settings.boardSize)
+    _y = Random.nextInt(Settings.boardSize)
   }
-  private var _width = .4
-  private var _height = .4
+  private var _width = Settings.appleWidth
+  private var _height = Settings.appleHeight
   val animationSpeed = 4
   private var animationTimer = animationSpeed
 
@@ -19,6 +18,7 @@ class Apple extends Entity {
   def y = _y
   def width = _width 
   def height = _height
+  val color = 1
 
 
 
@@ -34,5 +34,7 @@ class Apple extends Entity {
       animationTimer = animationSpeed
     } else animationTimer -= 1
   }
+
+  def makePassable():PassableEntity = new PassableEntity(x, y, width, height, EntityType.apple, color)
 
 }

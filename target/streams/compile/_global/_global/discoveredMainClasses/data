@@ -1,1 +1,1 @@
-["snake.Main"]
+["snake.Client","snake.Main","snake.Server"]

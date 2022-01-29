@@ -5,6 +5,9 @@ trait Entity {
   def y:Int
   def width:Double
   def height:Double
+  val level:Level
+  def color:Int
 
-  def update()
+  def update():Unit
+  def makePassable():PassableEntity
 }
