@@ -7931,3 +7931,27 @@ java.lang.NullPointerException
 2022.01.23 15:17:39 INFO  time: compiled snake in 0.98s
 2022.01.23 15:17:44 INFO  compiling snake (1 scala source)
 2022.01.23 15:17:44 INFO  time: compiled snake in 0.94s
+2022.01.24 10:00:16 INFO  shutting down Metals
+2022.01.24 10:00:16 INFO  Shut down connection with build server.
+2022.01.24 10:00:16 INFO  Shut down connection with build server.
+2022.01.24 10:00:16 INFO  Shut down connection with build server.
+2022.01.27 10:41:51 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/logan/Desktop/school/Projects/snake/.metals/lsp.trace.json or /Users/logan/Library/Caches/org.scalameta.metals/lsp.trace.json
+2022.01.27 10:41:52 INFO  logging to file /Users/logan/Desktop/school/Projects/snake/.metals/metals.log
+2022.01.27 10:41:52 INFO  Started: Metals version 0.11.1 in workspace '/Users/logan/Desktop/school/Projects/snake' for client Visual Studio Code 1.63.2.
+2022.01.27 10:41:52 INFO  Parse release: 11.0.9
+2022.01.27 10:41:56 INFO  time: initialize in 4.22s
+2022.01.27 10:41:57 INFO  Attempting to connect to the build server...
+2022.01.27 10:41:57 INFO  skipping build import with status 'Installed'
+2022.01.27 10:41:57 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/logan/Desktop/school/Projects/snake/.metals/bsp.trace.json or /Users/logan/Library/Caches/org.scalameta.metals/bsp.trace.json
+2022.01.27 10:41:57 INFO  Attempting to connect to the build server...
+2022.01.27 10:41:57 INFO  Attempting to connect to the build server...
+2022.01.27 10:41:57 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/logan/Desktop/school/Projects/snake/project/project/.metals/bsp.trace.json or /Users/logan/Library/Caches/org.scalameta.metals/bsp.trace.json
+2022.01.27 10:41:58 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/logan/Desktop/school/Projects/snake/project/.metals/bsp.trace.json or /Users/logan/Library/Caches/org.scalameta.metals/bsp.trace.json
+2022.01.27 10:41:58 INFO  time: Connected to build server in 0.7s
+2022.01.27 10:41:58 INFO  Connected to Build server: Bloop v1.4.12
+2022.01.27 10:41:57 INFO  time: Imported build in 0.22s
+2022.01.27 10:42:04 INFO  time: indexed workspace in 5.86s
+2022.01.28 00:18:39 INFO  shutting down Metals
+2022.01.28 00:18:39 INFO  Shut down connection with build server.
+2022.01.28 00:18:39 INFO  Shut down connection with build server.
+2022.01.28 00:18:39 INFO  Shut down connection with build server.
